@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Search, Filter, BookOpen, Video, FileText, Users, Star, ArrowRight } from "lucide-react"
 import Link from "next/link"
@@ -108,6 +108,22 @@ const mockInstructors: Instructor[] = [
       articles: 35,
       videos: 12,
       courses: 4
+    },
+    isPremium: true
+  },
+  {
+    id: "6",
+    name: "照喜名 いずみ",
+    title: "介護教育・研修スペシャリスト",
+    avatar: "/avatar6.jpg",
+    specialty: ["ケアマネジメント", "認知症ケア"],
+    bio: "介護現場での豊富な経験を活かし、実践的な教育プログラムを展開",
+    rating: 4.9,
+    studentCount: 1420,
+    contentCount: {
+      articles: 38,
+      videos: 42,
+      courses: 6
     },
     isPremium: true
   }
@@ -309,9 +325,10 @@ export default function InstructorsPage() {
             <Card key={instructor.id} className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-start gap-4">
-                  <Avatar className="size-16">
-                    <AvatarImage src={instructor.avatar} alt={instructor.name} />
-                    <AvatarFallback>{instructor.name.slice(0, 2)}</AvatarFallback>
+                  <Avatar className="size-16 bg-primary text-primary-foreground">
+                    <AvatarFallback className="bg-primary text-primary-foreground text-lg font-semibold">
+                      {instructor.name.slice(0, 2)}
+                    </AvatarFallback>
                   </Avatar>
                   <div className="flex-1">
                     <div className="flex items-start justify-between">

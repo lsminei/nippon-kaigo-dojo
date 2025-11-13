@@ -17,6 +17,7 @@ interface User {
 interface AuthContextType {
   user: User | null
   isLoading: boolean
+  mounted: boolean
   login: (email: string, password: string) => Promise<void>
   logout: () => Promise<void>
   signup: (email: string, password: string, fullName: string) => Promise<void>
@@ -61,9 +62,13 @@ const MOCK_USERS = {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [mounted, setMounted] = useState(false)
   const router = useRouter()
 
   useEffect(() => {
+    // Mark as mounted to prevent hydration mismatch
+    setMounted(true)
+
     // Check if user is logged in from localStorage (mock mode)
     const storedUser = localStorage.getItem("mockUser")
     if (storedUser) {
@@ -181,6 +186,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     <AuthContext.Provider value={{
       user,
       isLoading,
+      mounted,
       login,
       logout,
       signup,

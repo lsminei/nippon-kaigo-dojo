@@ -55,15 +55,15 @@ const recentVideos = [
 
 export default function DashboardPage() {
   const [searchQuery, setSearchQuery] = useState("")
-  const { user, logout } = useAuth()
+  const { user, logout, mounted } = useAuth()
 
   const getUserInitial = () => {
-    if (!user?.full_name) return "U"
+    if (!mounted || !user?.full_name) return "U"
     return user.full_name.charAt(0)
   }
 
   const getUserDisplayName = () => {
-    if (!user?.full_name) return "ゲスト"
+    if (!mounted || !user?.full_name) return "ゲスト"
     return user.full_name
   }
 

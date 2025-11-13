@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+
 const nextConfig = {
   output: 'export',
-  basePath: '/nippon-kaigo-dojo',
-  assetPrefix: '/nippon-kaigo-dojo',
+  basePath: isProd ? '/nippon-kaigo-dojo' : '',
+  assetPrefix: isProd ? '/nippon-kaigo-dojo' : '',
   typescript: {
     ignoreBuildErrors: true,
   },

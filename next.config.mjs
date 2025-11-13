@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '',
+  basePath: '/nippon-kaigo-dojo',
+  assetPrefix: '/nippon-kaigo-dojo',
   typescript: {
     ignoreBuildErrors: true,
   },

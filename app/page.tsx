@@ -409,7 +409,7 @@ export default function LandingPage() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="text-7xl mb-8 opacity-30 text-accent">"</div>
             <blockquote className="text-2xl md:text-3xl font-bold mb-8 text-balance leading-relaxed">
-              {"道を極めたいものが、正当に評価され、給与が上がるはずだ。"}
+              {"道を極めたいものが、正当に評価され、存在が際立つ時代へ。"}
             </blockquote>
             <div className="flex items-center justify-center gap-3">
               <div className="h-px w-16 bg-accent" />

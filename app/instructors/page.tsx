@@ -295,7 +295,7 @@ export default function InstructorsPage() {
               {"参加費用"}
             </Link>
             <Link
-              href="/#about"
+              href="/philosophy"
               className="text-sm font-medium text-foreground hover:text-accent transition-colors border-b-2 border-transparent hover:border-accent pb-1"
             >
               {"理念"}

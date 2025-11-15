@@ -28,14 +28,41 @@ interface RelatedVideo {
 
 const mockVideos: Video[] = [
   {
-    id: "1",
-    title: "ケアプランAIの中に入ろうとしている人　玉城さんの考え",
-    description: "AI時代のケアマネジメントについて、玉城竜一氏が深く考察します。AIツールが普及する中で、ケアマネジャーとしての本質的な役割とは何か、人間ならではの価値をどう発揮するかについて語ります。",
+    id: "1_1",
+    title: "ケアマネジメントとは何か",
+    description: "ケアマネジメントの基本概念と、AI時代における役割について学びます。",
     course: "ケアマネ道場",
     instructor: "玉城 竜一",
-    duration: "28:32",
+    duration: "18:32",
     uploadDate: "2025年1月8日",
     views: 3200,
+    category: "ケアマネジメント",
+    transcript: `本日は、ケアマネジメントの基本についてお話しします。
+
+ケアマネジメントとは、単なる「サービスの調整」ではありません。それは、利用者の人生の物語に寄り添い、その人らしい生活を支援するための専門的な実践です。
+
+私たちケアマネジャーは、利用者と様々なサービス、そして地域資源を結びつける「翻訳者」としての役割を担っています。
+
+この講座では、ケアマネジメントの本質を一緒に学んでいきましょう。`,
+    objectives: [
+      "ケアマネジメントの基本概念を理解する",
+      "ケアマネジャーの役割と責任を学ぶ",
+      "利用者中心のアプローチの重要性を理解する"
+    ],
+    resources: [
+      "ケアマネジメント基本テキスト（PDF）",
+      "ケアマネジメント倫理綱領"
+    ]
+  },
+  {
+    id: "1_2",
+    title: "AI時代の変化と課題",
+    description: "AI時代のケアマネジメントについて、玉城竜一氏が深く考察します。",
+    course: "ケアマネ道場",
+    instructor: "玉城 竜一",
+    duration: "22:15",
+    uploadDate: "2025年1月8日",
+    views: 2850,
     category: "ケアマネジメント",
     transcript: `本日は、AI時代のケアマネジメントについてお話しします。
 
@@ -52,91 +79,99 @@ AIは確かに効率化やデータ分析において優れた能力を発揮し
     ],
     resources: [
       "AI活用ガイドライン（PDF）",
-      "ケアマネジメント倫理綱領",
       "参考資料：厚生労働省AIケアプラン指針"
     ]
   },
   {
-    id: "2",
-    title: "なぜこの考え方に？ケアマネ論、倫理",
-    description: "ケアマネジメントの倫理と哲学について深く掘り下げます。",
+    id: "1_3",
+    title: "人間にしかできない価値",
+    description: "ケアマネジャーとして人間にしかできない価値について考えます。",
     course: "ケアマネ道場",
     instructor: "玉城 竜一",
-    duration: "32:15",
-    uploadDate: "2025年1月5日",
-    views: 2850,
+    duration: "25:48",
+    uploadDate: "2025年1月7日",
+    views: 2600,
     category: "ケアマネジメント",
-    transcript: "ケアマネジメントの倫理について考察します...",
+    transcript: "人間にしかできない価値について深く考察します...",
     objectives: [
-      "ケアマネジメント倫理の基礎を学ぶ",
-      "実践における倫理的ジレンマへの対処法を理解する"
+      "人間ならではの価値を理解する",
+      "共感と倫理的判断の重要性を学ぶ"
     ],
     resources: [
-      "倫理ガイドライン",
-      "事例集"
+      "実践事例集（PDF）"
     ]
   },
   {
-    id: "3",
-    title: "ケアマネ法定研修の完全オンライン化",
-    description: "全国に先駆けて実現した沖縄県のケアマネ法定研修オンライン化の取り組み。",
+    id: "1_4",
+    title: "これからのケアマネジャー像",
+    description: "これからの時代に求められるケアマネジャー像について考えます。",
     course: "ケアマネ道場",
     instructor: "玉城 竜一",
-    duration: "35:20",
-    uploadDate: "2025年1月3日",
+    duration: "20:12",
+    uploadDate: "2025年1月6日",
     views: 2400,
-    category: "DX推進",
-    transcript: "法定研修のオンライン化について...",
+    category: "ケアマネジメント",
+    transcript: "これからのケアマネジャーに求められる資質について...",
     objectives: [
-      "オンライン研修の効果を理解する",
-      "DX推進のポイントを学ぶ"
+      "未来のケアマネジャー像を理解する",
+      "継続的な成長の重要性を学ぶ"
     ],
     resources: [
-      "オンライン研修ガイド"
+      "キャリア開発ガイド（PDF）"
     ]
   },
   {
-    id: "4",
-    title: "地域包括ケアシステムの実践",
-    description: "地域包括ケアシステムの構築と実践について学びます。",
-    course: "ケアマネ道場",
-    instructor: "玉城 竜一",
-    duration: "30:45",
-    uploadDate: "2025年1月1日",
-    views: 2100,
-    category: "地域ケア",
-    transcript: "地域包括ケアシステムについて...",
+    id: "2_1",
+    title: "在宅介護とは",
+    description: "在宅介護の基本的な考え方と重要性について学びます。",
+    course: "在宅介護実践コース",
+    instructor: "山田 花子",
+    duration: "15:20",
+    uploadDate: "2025年1月5日",
+    views: 1800,
+    category: "在宅介護",
+    transcript: "在宅介護の基本について解説します...",
     objectives: [
-      "地域包括ケアの概念を理解する",
-      "多職種連携の重要性を学ぶ"
+      "在宅介護の基本概念を理解する",
+      "在宅での支援の特徴を学ぶ"
     ],
     resources: [
-      "地域ケアガイドライン"
+      "在宅介護ガイドブック（PDF）"
+    ]
+  },
+  {
+    id: "2_2",
+    title: "利用者理解の重要性",
+    description: "利用者を深く理解することの重要性について学びます。",
+    course: "在宅介護実践コース",
+    instructor: "山田 花子",
+    duration: "18:45",
+    uploadDate: "2025年1月4日",
+    views: 1600,
+    category: "在宅介護",
+    transcript: "利用者理解のポイントについて...",
+    objectives: [
+      "利用者理解の方法を学ぶ",
+      "個別性を尊重した支援を理解する"
+    ],
+    resources: [
+      "アセスメントシート（PDF）"
     ]
   }
 ]
 
-const relatedVideos: Record<string, RelatedVideo[]> = {
-  "1": [
-    { id: "2", title: "なぜこの考え方に？ケアマネ論、倫理", duration: "32:15", views: 2850 },
-    { id: "3", title: "ケアマネ法定研修の完全オンライン化", duration: "35:20", views: 2400 },
-    { id: "4", title: "地域包括ケアシステムの実践", duration: "30:45", views: 2100 }
-  ],
-  "2": [
-    { id: "1", title: "ケアプランAIの中に入ろうとしている人　玉城さんの考え", duration: "28:32", views: 3200 },
-    { id: "3", title: "ケアマネ法定研修の完全オンライン化", duration: "35:20", views: 2400 },
-    { id: "4", title: "地域包括ケアシステムの実践", duration: "30:45", views: 2100 }
-  ],
-  "3": [
-    { id: "1", title: "ケアプランAIの中に入ろうとしている人　玉城さんの考え", duration: "28:32", views: 3200 },
-    { id: "2", title: "なぜこの考え方に？ケアマネ論、倫理", duration: "32:15", views: 2850 },
-    { id: "4", title: "地域包括ケアシステムの実践", duration: "30:45", views: 2100 }
-  ],
-  "4": [
-    { id: "1", title: "ケアプランAIの中に入ろうとしている人　玉城さんの考え", duration: "28:32", views: 3200 },
-    { id: "2", title: "なぜこの考え方に？ケアマネ論、倫理", duration: "32:15", views: 2850 },
-    { id: "3", title: "ケアマネ法定研修の完全オンライン化", duration: "35:20", views: 2400 }
-  ]
+// Helper function to get related videos for a given video ID
+function getRelatedVideos(videoId: string): RelatedVideo[] {
+  const courseId = videoId.split('_')[0]
+  return mockVideos
+    .filter(v => v.id.startsWith(`${courseId}_`) && v.id !== videoId)
+    .slice(0, 5)
+    .map(v => ({
+      id: v.id,
+      title: v.title,
+      duration: v.duration,
+      views: v.views
+    }))
 }
 
 export function generateStaticParams() {
@@ -153,7 +188,7 @@ export default async function WatchPage({ params }: { params: Promise<{ id: stri
     notFound()
   }
 
-  const related = relatedVideos[id] || []
+  const related = getRelatedVideos(id)
 
   return (
     <div className="min-h-screen bg-background">

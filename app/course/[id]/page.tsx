@@ -442,17 +442,18 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
                     <h4 className="font-semibold text-sm">{section.section}</h4>
                     <div className="space-y-1">
                       {section.lessons.map((lesson) => (
-                        <div
+                        <Link
                           key={lesson.id}
+                          href={`/watch/${course.id}_${lesson.id}`}
                           className="flex items-center justify-between p-2 hover:bg-muted/50 rounded cursor-pointer group"
                         >
                           <div className="flex items-center gap-2 flex-1 min-w-0">
                             {lesson.isCompleted ? (
                               <CheckCircle2 className="size-4 text-accent flex-shrink-0" />
                             ) : (
-                              <Play className="size-4 text-muted-foreground flex-shrink-0" />
+                              <Play className="size-4 text-muted-foreground flex-shrink-0 group-hover:text-accent transition-colors" />
                             )}
-                            <span className="text-sm truncate">{lesson.title}</span>
+                            <span className="text-sm truncate group-hover:text-accent transition-colors">{lesson.title}</span>
                             {lesson.isFree && (
                               <Badge variant="secondary" className="text-xs">無料</Badge>
                             )}
@@ -460,7 +461,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
                           <span className="text-xs text-muted-foreground flex-shrink-0 ml-2">
                             {lesson.duration}
                           </span>
-                        </div>
+                        </Link>
                       ))}
                     </div>
                   </div>

@@ -672,6 +672,7 @@ export default async function InstructorDetailPage({ params }: { params: Promise
         </div>
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-red-600 flex-shrink-0" />
             <div>
               <div className="font-bold text-xl text-foreground tracking-wide">NIPPON介護道場</div>
               <div className="text-xs text-muted-foreground">日本の介護を、誇りある道へ。</div>

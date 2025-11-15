@@ -37,9 +37,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-3 mb-6">
-            <div className="size-14 bg-primary rounded-full flex items-center justify-center border-2 border-accent">
-              <span className="text-primary-foreground font-bold text-2xl">介</span>
-            </div>
+            <div className="w-8 h-8 rounded-full bg-red-600 flex-shrink-0" />
             <div className="text-left">
               <div className="text-2xl font-bold text-foreground tracking-wide">{"NIPPON介護道場"}</div>
               <div className="text-xs text-muted-foreground">{"日本の介護を、誇りある道へ。"}</div>

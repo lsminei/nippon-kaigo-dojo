@@ -77,7 +77,7 @@ export default function DashboardPage() {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
-              <div className="size-10 bg-accent rounded-full border-2 border-accent shadow-sm" />
+              <div className="w-8 h-8 rounded-full bg-red-600 flex-shrink-0" />
               <span className="text-lg font-bold text-foreground hidden sm:inline">{"NIPPON介護道場"}</span>
             </Link>
 

@@ -13,7 +13,7 @@ const slides = [
     badge: "特集動画",
     title: "AI時代のケアマネジメント",
     description: "玉城竜一氏が語る、ケアプランAIの未来と、人間にしかできないケアの本質。",
-    videoId: "1",
+    courseId: "1",
     image: "/professional-japanese-instructor-teaching-caregivi.jpg",
   },
   // Message slide 1
@@ -31,7 +31,7 @@ const slides = [
     badge: "講義シリーズ",
     title: "ケアマネ法定研修の完全オンライン化",
     description: "全国に先駆けて実現した沖縄県のケアマネ法定研修オンライン化の取り組みについて。",
-    videoId: "2",
+    courseId: "1",
     image: "/professional-japanese-instructor-teaching-caregivi.jpg",
   },
   // Video slide 3
@@ -40,7 +40,7 @@ const slides = [
     badge: "DX推進",
     title: "介護業界のDXを目指して",
     description: "沖縄の介護福祉業界における先進的なデジタルトランスフォーメーションの実践例。",
-    videoId: "3",
+    courseId: "1",
     image: "/professional-japanese-instructor-teaching-caregivi.jpg",
   },
   // Message slide 2
@@ -79,9 +79,9 @@ export default function HeroSlider() {
                 <p className="text-lg text-primary-foreground/90 mb-6 leading-relaxed">{slide.description}</p>
                 <div className="flex flex-wrap gap-4">
                   <Button asChild size="lg" variant="secondary" className="text-base">
-                    <Link href={`/watch/${slide.videoId}`}>
+                    <Link href={`/course/${slide.courseId}`}>
                       <Play className="mr-2 size-5" />
-                      動画を視聴
+                      コースを見る
                     </Link>
                   </Button>
                   <Button

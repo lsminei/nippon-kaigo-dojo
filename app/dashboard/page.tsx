@@ -27,6 +27,7 @@ const recentVideos = [
     id: 1,
     title: "ケアプランAIの中に入ろうとしている人　玉城さんの考え",
     course: "ケアマネ道場",
+    courseId: "1",
     duration: "28:32",
     thumbnail: "ai-care-planning",
   },
@@ -34,6 +35,7 @@ const recentVideos = [
     id: 2,
     title: "なぜこの考え方に？ケアマネ論、倫理",
     course: "ケアマネ道場",
+    courseId: "1",
     duration: "32:15",
     thumbnail: "care-ethics",
   },
@@ -41,6 +43,7 @@ const recentVideos = [
     id: 3,
     title: "教育とメタ認知リフレクション　学び方",
     course: "ケアマネ道場",
+    courseId: "1",
     duration: "25:08",
     thumbnail: "learning-methods",
   },
@@ -48,6 +51,7 @@ const recentVideos = [
     id: 4,
     title: "スキルのお話し　スキルは言語化",
     course: "ケアマネ道場",
+    courseId: "1",
     duration: "30:45",
     thumbnail: "skill-verbalization",
   },
@@ -192,7 +196,7 @@ export default function DashboardPage() {
                     key={video.id}
                     className="overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow border-2 hover:border-accent"
                   >
-                    <Link href={`/watch/${video.id}`}>
+                    <Link href={`/course/${video.courseId}`}>
                       <div className="aspect-video bg-muted relative overflow-hidden">
                         <div className="absolute inset-0 bg-[url('/professional-japanese-instructor-teaching-caregivi.jpg')] bg-cover bg-center" />
                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">

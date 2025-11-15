@@ -381,7 +381,7 @@ export default function LandingPage() {
                   duration: "31:52",
                 },
               ].map((topic, i) => (
-                <Link key={i} href={`/watch/${i + 1}`}>
+                <Link key={i} href="/course/1">
                   <Card className="p-6 hover:shadow-xl transition-all border-2 hover:border-accent group cursor-pointer">
                     <div className="flex gap-4 items-start">
                       <div className="size-16 bg-accent text-accent-foreground rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-sm">

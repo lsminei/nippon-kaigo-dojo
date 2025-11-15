@@ -288,6 +288,12 @@ export default function InstructorsPage() {
               {"講師一覧"}
             </Link>
             <Link
+              href="/#pricing"
+              className="text-sm font-medium text-foreground hover:text-accent transition-colors border-b-2 border-transparent hover:border-accent pb-1"
+            >
+              {"参加費用"}
+            </Link>
+            <Link
               href="/#about"
               className="text-sm font-medium text-foreground hover:text-accent transition-colors border-b-2 border-transparent hover:border-accent pb-1"
             >

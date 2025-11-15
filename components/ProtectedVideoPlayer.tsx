@@ -13,15 +13,25 @@ interface ProtectedVideoPlayerProps {
   children: React.ReactNode
 }
 
+// Helper function to check if a video is free (first lesson of any course)
+function isFreeVideo(videoId: string): boolean {
+  // Free videos are the first lesson of each course (e.g., "1_1", "2_1", "3_1")
+  const parts = videoId.split('_')
+  if (parts.length !== 2) return false
+  return parts[1] === '1'
+}
+
 export function ProtectedVideoPlayer({ videoId, title, children }: ProtectedVideoPlayerProps) {
   const { user, isLoading, mounted, hasActiveSubscription } = useAuth()
   const [shouldShowContent, setShouldShowContent] = useState(false)
+  const isFree = isFreeVideo(videoId)
 
   useEffect(() => {
     if (mounted && !isLoading) {
-      setShouldShowContent(!!user && hasActiveSubscription())
+      // Show content if video is free OR user has active subscription
+      setShouldShowContent(isFree || (!!user && hasActiveSubscription()))
     }
-  }, [mounted, isLoading, user, hasActiveSubscription])
+  }, [mounted, isLoading, user, hasActiveSubscription, isFree])
 
   // Show loading state
   if (!mounted || isLoading) {
@@ -32,8 +42,8 @@ export function ProtectedVideoPlayer({ videoId, title, children }: ProtectedVide
     )
   }
 
-  // Show login/signup prompt if not authenticated or no subscription
-  if (!user || !hasActiveSubscription()) {
+  // Show login/signup prompt if not authenticated or no subscription (and video is not free)
+  if (!isFree && (!user || !hasActiveSubscription())) {
     return (
       <div className="container mx-auto px-4 py-12">
         <Card className="max-w-2xl mx-auto border-2">

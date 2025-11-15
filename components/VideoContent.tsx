@@ -36,7 +36,15 @@ interface VideoContentProps {
   relatedVideos: RelatedVideo[]
 }
 
+// Helper function to check if a video is free (first lesson of any course)
+function isFreeVideo(videoId: string): boolean {
+  const parts = videoId.split('_')
+  if (parts.length !== 2) return false
+  return parts[1] === '1'
+}
+
 export function VideoContent({ video, relatedVideos }: VideoContentProps) {
+  const isFree = isFreeVideo(video.id)
   return (
     <ProtectedVideoPlayer videoId={video.id} title={video.title}>
       {/* Video Player Section */}
@@ -65,6 +73,9 @@ export function VideoContent({ video, relatedVideos }: VideoContentProps) {
               <div className="flex items-center gap-2 mb-3">
                 <Badge className="bg-accent text-accent-foreground">{video.category}</Badge>
                 <Badge variant="secondary">{video.course}</Badge>
+                {isFree && (
+                  <Badge className="bg-green-100 text-green-800 border-green-200">無料公開中</Badge>
+                )}
               </div>
               <h1 className="text-3xl font-bold mb-4 leading-tight">{video.title}</h1>
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">

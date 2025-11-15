@@ -126,6 +126,70 @@ const mockInstructors: Instructor[] = [
       courses: 6
     },
     isPremium: true
+  },
+  {
+    id: "7",
+    name: "嶺井 美幸",
+    title: "介護事業経営者・看護師",
+    avatar: "/avatar7.jpg",
+    specialty: ["施設介護", "在宅介護"],
+    bio: "沖縄県南城市で介護事業を展開。看護師の経験を活かした質の高いケアを提供（有限会社陽気 取締役）",
+    rating: 4.8,
+    studentCount: 980,
+    contentCount: {
+      articles: 32,
+      videos: 28,
+      courses: 4
+    },
+    isPremium: true
+  },
+  {
+    id: "8",
+    name: "嶺井 政哉",
+    title: "介護DX推進者・ソフトウェア開発者",
+    avatar: "/avatar8.jpg",
+    specialty: ["ケアマネジメント", "施設介護"],
+    bio: "介護の標準化を目指す「介護のマナ」を開発。介護現場のDX化を推進（株式会社ライフシフト 代表）",
+    rating: 4.7,
+    studentCount: 850,
+    contentCount: {
+      articles: 26,
+      videos: 35,
+      courses: 5
+    },
+    isPremium: true
+  },
+  {
+    id: "9",
+    name: "與那城 愛理",
+    title: "バックオフィススペシャリスト・CS マネージャー",
+    avatar: "/avatar9.jpg",
+    specialty: ["ケアマネジメント", "施設介護"],
+    bio: "介護のマナのカスタマーサクセスマネージャー。琉球大学経済学部出身、開邦高校卒",
+    rating: 4.9,
+    studentCount: 1150,
+    contentCount: {
+      articles: 42,
+      videos: 38,
+      courses: 6
+    },
+    isPremium: true
+  },
+  {
+    id: "10",
+    name: "上原 宇行",
+    title: "財務スペシャリスト・経営支援コンサルタント",
+    avatar: "/avatar10.jpg",
+    specialty: ["ケアマネジメント", "施設介護"],
+    bio: "元沖縄金融公庫。中小企業の財務支援と創業期融資支援を提供（ユアトリー株式会社 代表取締役）",
+    rating: 4.6,
+    studentCount: 720,
+    contentCount: {
+      articles: 30,
+      videos: 24,
+      courses: 5
+    },
+    isPremium: true
   }
 ]
 

@@ -277,7 +277,7 @@ export default function InstructorsPage() {
               {"最新情報"}
             </Link>
             <Link
-              href="/#courses"
+              href="/courses"
               className="text-sm font-medium text-foreground hover:text-accent transition-colors border-b-2 border-transparent hover:border-accent pb-1"
             >
               {"道場一覧"}
